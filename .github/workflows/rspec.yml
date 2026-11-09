@@ -1,18 +1,19 @@
 name: Run RSpec
 
-on:
-  workflow_call:
-    inputs:
-      ref:
-        description: 'The branch, tag or SHA to checkout'
-        required: false
-        type: string
-      publishingApiRef:
-        description: 'The branch, tag or SHA to checkout Publishing API'
-        required: false
-        default: main
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_call:
+#     inputs:
+#       ref:
+#         description: 'The branch, tag or SHA to checkout'
+#         required: false
+#         type: string
+#       publishingApiRef:
+#         description: 'The branch, tag or SHA to checkout Publishing API'
+#         required: false
+#         default: main
+#         type: string
+# 
 jobs:
   run-rspec:
     name: Run RSpec

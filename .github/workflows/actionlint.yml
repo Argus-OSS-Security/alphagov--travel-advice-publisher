@@ -1,7 +1,8 @@
 name: Lint GitHub Actions
-on:
-  push:
-    paths: ['.github/**']
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     paths: ['.github/**']
 jobs:
   actionlint:
     runs-on: ubuntu-latest

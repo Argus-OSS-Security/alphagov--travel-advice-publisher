@@ -4,9 +4,10 @@ name: Build image from PR
 # and pushing to ghcr.io/alphagov/govuk/travel-advice-publisher with the branch
 # name as the image tag, unless the branch name contains a '/' (which
 # cannot be used as a Docker tag), in which case no image is pushed.
-on:
-  pull_request:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+# 
 concurrency:
   group: build-image-from-pr-${{ github.event.pull_request.number }}
   cancel-in-progress: true
